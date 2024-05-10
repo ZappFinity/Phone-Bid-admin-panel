@@ -34,4 +34,13 @@ Route::put('/blog/update/{id}', [App\Http\Controllers\BlogController::class, 'up
 //blog delete api
 Route::delete('/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'destroy'])->name('blog.destroy');
 
+//mobile get api
+Route::get('/mobile/list', [App\Http\Controllers\MobileController::class, 'index'])->name('mobile');
+//mobile post api
+Route::post('/mobile/store', [App\Http\Controllers\MobileController::class, 'store'])->name('mobile.store');
+//mobile update api
+Route::put('/mobile/update/{id}', [App\Http\Controllers\MobileController::class, 'update'])->name('mobile.update');
+//mobile delete api
+Route::delete('/mobile/delete/{id}', [App\Http\Controllers\MobileController::class, 'destroy'])->name('mobile.destroy');
+
 // Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');

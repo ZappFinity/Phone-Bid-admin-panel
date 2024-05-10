@@ -39,6 +39,11 @@
                         <i class='bx bx-news'></i> <span>Blogs</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('mobile') }}">
+                        <i class='bx bx-mobile'></i> <span>Mobiles</span>
+                    </a>
+                </li>
 
 
 
