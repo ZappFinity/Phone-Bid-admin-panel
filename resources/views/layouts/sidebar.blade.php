@@ -44,7 +44,12 @@
                         <i class='bx bx-mobile'></i> <span>Mobiles</span>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('accessories') }}">
+                        <i class='bx bx-headphone'></i> <span>
+                            Accessories</span>
+                    </a>
+                </li>
 
 
             </ul>

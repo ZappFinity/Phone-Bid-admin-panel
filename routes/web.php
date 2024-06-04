@@ -43,4 +43,12 @@ Route::put('/mobile/update/{id}', [App\Http\Controllers\MobileController::class,
 //mobile delete api
 Route::delete('/mobile/delete/{id}', [App\Http\Controllers\MobileController::class, 'destroy'])->name('mobile.destroy');
 
+//accessories get api
+Route::get('/accessories/list', [App\Http\Controllers\AccessoriesController::class, 'index'])->name('accessories');
+//accessories post api
+Route::post('/accessories/store', [App\Http\Controllers\AccessoriesController::class, 'store'])->name('accessories.store');
+//accessories update api
+Route::put('/accessories/update/{id}', [App\Http\Controllers\AccessoriesController::class, 'update'])->name('accessories.update');
+//accessories delete api
+Route::delete('/accessories/delete/{id}', [App\Http\Controllers\AccessoriesController::class, 'destroy'])->name('accessories.destroy');
 // Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
