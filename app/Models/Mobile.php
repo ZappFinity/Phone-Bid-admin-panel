@@ -43,4 +43,9 @@ class Mobile extends Model
         'nfc',
         'is_new'
     ];
+
+    public function bids()
+    {
+        return $this->hasMany(Bid::class);
+    }
 }

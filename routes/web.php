@@ -52,3 +52,9 @@ Route::put('/accessories/update/{id}', [App\Http\Controllers\AccessoriesControll
 //accessories delete api
 Route::delete('/accessories/delete/{id}', [App\Http\Controllers\AccessoriesController::class, 'destroy'])->name('accessories.destroy');
 // Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+
+//bidding get api
+Route::get('/bidding/list', [App\Http\Controllers\BiddingController::class, 'index'])->name('bidding');
+
+//repairing get api
+Route::get('/repairing/list', [App\Http\Controllers\RepairingController::class, 'index'])->name('repairing');
