@@ -68,6 +68,28 @@ Repairing
                                     </span>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <h3 class="fs-15 text-dark">
+                                        Issue
+                                    </h3>
+                                </div>
+                                <div class="col-8">
+                                    <span class="fs-15 text-dark">
+                                        {{ $req->issue }}
+                                    </span>
+                                </div>
+                            </div>
+                            @if ($req->status == 'Pending')
+                                <a href="{{ route('accept', $req->id) }}" class="btn btn-primary">
+                                    Accept
+                                </a>
+                            @else
+                                <a href="#" class="btn btn-secondary">
+                                    Already Accepted
+                                </a>
+                            @endif
+                            
                         </div>
                     </div>
                 </div>

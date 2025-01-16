@@ -58,3 +58,5 @@ Route::get('/bidding/list', [App\Http\Controllers\BiddingController::class, 'ind
 
 //repairing get api
 Route::get('/repairing/list', [App\Http\Controllers\RepairingController::class, 'index'])->name('repairing');
+// repairing put api
+Route::get('/repairing/request/{id}', [App\Http\Controllers\RepairingController::class, 'accept'])->name('accept');

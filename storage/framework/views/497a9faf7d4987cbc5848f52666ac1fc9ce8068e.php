@@ -72,6 +72,29 @@ Repairing
                                     </span>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <h3 class="fs-15 text-dark">
+                                        Issue
+                                    </h3>
+                                </div>
+                                <div class="col-8">
+                                    <span class="fs-15 text-dark">
+                                        <?php echo e($req->issue); ?>
+
+                                    </span>
+                                </div>
+                            </div>
+                            <?php if($req->status == 'Pending'): ?>
+                                <a href="<?php echo e(route('accept', $req->id)); ?>" class="btn btn-primary">
+                                    Accept
+                                </a>
+                            <?php else: ?>
+                                <a href="#" class="btn btn-secondary">
+                                    Already Accepted
+                                </a>
+                            <?php endif; ?>
+                            
                         </div>
                     </div>
                 </div>
