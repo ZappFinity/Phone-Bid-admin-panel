@@ -28,15 +28,15 @@
                         <form action="<?php echo e(route('mobile.store')); ?>" method="POST">
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('POST'); ?>
-                            <div class="modal-body">
+                            <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-md-6">
                                         <label for="">
                                             Name
                                         </label>
                                         <input required type="text" class="form-control" name="name">
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6">
                                         <label for="">
                                             Image
                                         </label>
@@ -44,19 +44,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Price
                                         </label>
                                         <input type="text" class="form-control" name="price">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Release Date
                                         </label>
                                         <input type="text" class="form-control" name="release_date">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Sim Support
                                         </label>
@@ -64,19 +64,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Operating System
                                         </label>
                                         <input type="text" class="form-control" name="operating_system">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Phone Wieght
                                         </label>
                                         <input type="text" class="form-control" name="phone_weight">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Phone Dimensions
                                         </label>
@@ -84,19 +84,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Screen Size
                                         </label>
                                         <input type="text" class="form-control" name="screen_size">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Screen Type
                                         </label>
                                         <input type="text" class="form-control" name="screen_resolution">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Screen Resolution
                                         </label>
@@ -104,19 +104,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Screen Protection
                                         </label>
                                         <input type="text" class="form-control" name="screen_protection">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Internal Memory
                                         </label>
                                         <input type="text" class="form-control" name="internal_memory">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Ram
                                         </label>
@@ -124,25 +124,25 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Card Slot
                                         </label>
                                         <input type="text" class="form-control" name="card_slot">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Processor
                                         </label>
                                         <input type="text" class="form-control" name="processor">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             GPU
                                         </label>
                                         <input type="text" class="form-control" name="gpu">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Battery
                                         </label>
@@ -150,19 +150,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Front Camera
                                         </label>
                                         <input type="text" class="form-control" name="front_camera">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Front Flash
                                         </label>
                                         <input type="text" class="form-control" name="front_flash">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Front Video Recording
                                         </label>
@@ -171,19 +171,19 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Back Camera
                                         </label>
                                         <input type="text" class="form-control" name="back_camera">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Back Flash
                                         </label>
                                         <input type="text" class="form-control" name="back_flash">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                         <label for="">
                                             Back Video Recording
                                         </label>
@@ -192,25 +192,25 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Bluetooth
                                         </label>
                                         <input type="text" class="form-control" name="bluetooth">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             3G
                                         </label>
                                         <input type="text" class="form-control" name="3G">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             4G/LTE
                                         </label>
                                         <input type="text" class="form-control" name="4G/LTE">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             5G
                                         </label>
@@ -219,25 +219,25 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Radio
                                         </label>
                                         <input type="text" class="form-control" name="radio">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Wi-Fi
                                         </label>
                                         <input type="text" class="form-control" name="wifi">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             NFC
                                         </label>
                                         <input type="text" class="form-control" name="nfc">
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3">
                                         <label for="">
                                             Is this a new mobile?
                                         </label>

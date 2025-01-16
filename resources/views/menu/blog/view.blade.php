@@ -122,7 +122,7 @@
                                                     <form method="POST" action="{{ route('blog.destroy', $blog->id) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <a href="{{ url('/idea/delete', $idea->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                                     </form>
                                                 </div>
                                             </div>
