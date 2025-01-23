@@ -55,6 +55,24 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <span class="text-dark">
+                                            Bid Status
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="badge 
+                                            <?php if($bid->status === 'Pending'): ?> bg-warning 
+                                            <?php elseif($bid->status === 'Accepted'): ?> bg-success 
+                                            <?php elseif($bid->status === 'Rejected'): ?> bg-danger 
+                                            <?php else: ?> bg-secondary <?php endif; ?>">
+                                            <?php echo e($bid->status); ?>
+
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <span class="text-dark">
                                             <?php echo e($bid->email); ?>
 
                                         </span>
@@ -79,6 +97,21 @@
                                         </span>
                                     </div>
                                 </div>
+                                <div class="row mb-3 mt-2">
+                                    <div class="col-4">
+                                        <a href="<?php echo e(url('/bidding/delete/'. $bid->id)); ?>"
+                                            class="btn btn-danger btn-sm">Delete</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="<?php echo e(url('/bidding/accept/'. $bid->id)); ?>"
+                                            class="btn btn-success btn-sm">Accept</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="<?php echo e(url('/bidding/reject/'. $bid->id)); ?>"
+                                            class="btn btn-dark btn-sm">Reject</a>
+                                    </div>
+                                </div>
+                                <hr>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             <a data-bs-toggle="modal" data-bs-target=".view<?php echo e($mobile->id); ?>"
                                 class="btn btn-info btn-sm"> <i class="ri-eye-line"></i></a>

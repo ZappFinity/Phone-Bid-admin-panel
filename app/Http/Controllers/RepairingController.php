@@ -16,7 +16,7 @@ class RepairingController extends Controller
     public function accept($id)
     {
         $req = MobileRepairing::find($id);
-        $req->status = 'Accepted';
+        $req->status = 'Accepted, InProgress';
         $req->save();
 
         return redirect()->back()->with('success', 'Repairing Request Accepted');

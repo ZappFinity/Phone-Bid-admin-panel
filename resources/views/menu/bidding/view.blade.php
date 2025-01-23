@@ -53,6 +53,23 @@
                                 <div class="row">
                                     <div class="col-8">
                                         <span class="text-dark">
+                                            Bid Status
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="badge 
+                                            @if ($bid->status === 'Pending') bg-warning 
+                                            @elseif ($bid->status === 'Accepted') bg-success 
+                                            @elseif ($bid->status === 'Rejected') bg-danger 
+                                            @else bg-secondary @endif">
+                                            {{ $bid->status }}
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <span class="text-dark">
                                             {{ $bid->email }}
                                         </span>
                                     </div>
@@ -74,6 +91,21 @@
                                         </span>
                                     </div>
                                 </div>
+                                <div class="row mb-3 mt-2">
+                                    <div class="col-4">
+                                        <a href="{{ url('/bidding/delete/'. $bid->id) }}"
+                                            class="btn btn-danger btn-sm">Delete</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="{{ url('/bidding/accept/'. $bid->id) }}"
+                                            class="btn btn-success btn-sm">Accept</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="{{ url('/bidding/reject/'. $bid->id) }}"
+                                            class="btn btn-dark btn-sm">Reject</a>
+                                    </div>
+                                </div>
+                                <hr>
                             @endforeach
                             <a data-bs-toggle="modal" data-bs-target=".view{{ $mobile->id }}"
                                 class="btn btn-info btn-sm"> <i class="ri-eye-line"></i></a>

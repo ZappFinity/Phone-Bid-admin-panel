@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bid;
 use App\Models\Mobile;
 use Illuminate\Http\Request;
 
@@ -74,8 +75,23 @@ class BiddingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destory($id)
     {
-        //
+        Bid::findOrFail($id)->delete();
+        return redirect()->back()->with('success', 'Bid deleted successfully');
+    }
+    public function accept($id)
+    {
+        $bid = Bid::findOrFail($id);
+        $bid->status = 'Accepted';
+        $bid->save();
+        return redirect()->back()->with('success', 'Bid Accepted successfully');
+    }
+    public function reject($id)
+    {
+        $bid = Bid::findOrFail($id);
+        $bid->status = 'Rejected';
+        $bid->save();
+        return redirect()->back()->with('success', 'Bid Rejected successfully');
     }
 }

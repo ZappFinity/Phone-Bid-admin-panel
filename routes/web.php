@@ -55,6 +55,9 @@ Route::delete('/accessories/delete/{id}', [App\Http\Controllers\AccessoriesContr
 
 //bidding get api
 Route::get('/bidding/list', [App\Http\Controllers\BiddingController::class, 'index'])->name('bidding');
+Route::get('/bidding/delete/{id}', [App\Http\Controllers\BiddingController::class, 'destory'])->name('bidding-delete');
+Route::get('/bidding/accept/{id}', [App\Http\Controllers\BiddingController::class, 'accept']);
+Route::get('/bidding/reject/{id}', [App\Http\Controllers\BiddingController::class, 'reject']);
 
 //repairing get api
 Route::get('/repairing/list', [App\Http\Controllers\RepairingController::class, 'index'])->name('repairing');
